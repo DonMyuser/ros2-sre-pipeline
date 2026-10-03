@@ -121,7 +121,7 @@ To get meaningful data, I inject faults on purpose (killed nodes, bad configs, b
 # 🗺️ Roadmap
 
 - [x] ROS 2 Jazzy workspace + smoke-test node
-- [ ] Build and tests in GitHub Actions
+- [x] Build and tests in GitHub Actions
 - [ ] Gazebo simulation scenarios as a quality gate
 - [ ] ARM64 image build and push to AWS ECR
 - [ ] Automated deployment to the Raspberry Pi
@@ -150,6 +150,7 @@ The smoke-test node logs a message every 3 seconds. Stop it with `Ctrl+C`.
 
 ```text
 ros2-sre-pipeline/
+├── .github/workflows/   # CI pipeline (build + test)
 └── src/                 # ROS 2 packages (hello_world_node)
 ```
 
