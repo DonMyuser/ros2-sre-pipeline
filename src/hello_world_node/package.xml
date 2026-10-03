@@ -3,10 +3,10 @@
 <package format="3">
   <name>hello_world_node</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="dario.g.contacto@gmail.com">sysop</maintainer>
-  <license>TODO: License declaration</license>
-
+  <description>Smoke-test node for the ROS 2 Jazzy CI pipeline</description>
+  <maintainer email="dario.g.contacto@gmail.com">Darío</maintainer>
+  <license>MIT</license>
+  <depend>rclpy</depend>
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>

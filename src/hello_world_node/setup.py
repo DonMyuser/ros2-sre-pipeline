@@ -13,10 +13,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='sysop',
+    maintainer='Darío',
     maintainer_email='dario.g.contacto@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Smoke-test node for the ROS 2 Jazzy CI pipeline',
+    license='MIT',
     extras_require={
         'test': [
             'pytest',
