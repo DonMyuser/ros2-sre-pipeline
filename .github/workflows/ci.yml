@@ -23,3 +23,10 @@ jobs:
           source /opt/ros/jazzy/setup.bash
           colcon test
           colcon test-result --verbose
+  docker-build:
+    runs-on: ubuntu-24.04
+    needs: build-and-test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t ros2-sre-pipeline:dev .
