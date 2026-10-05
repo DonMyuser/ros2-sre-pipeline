@@ -122,6 +122,7 @@ To get meaningful data, I inject faults on purpose (killed nodes, bad configs, b
 
 - [x] ROS 2 Jazzy workspace + smoke-test node
 - [x] Build and tests in GitHub Actions
+- [x] Dockerfile that builds and runs the node, built by a second CI job
 - [ ] Gazebo simulation scenarios as a quality gate
 - [ ] ARM64 image build and push to AWS ECR
 - [ ] Automated deployment to the Raspberry Pi
@@ -152,17 +153,8 @@ The smoke-test node logs a message every 3 seconds. Stop it with `Ctrl+C`.
 ros2-sre-pipeline/
 ├── .github/workflows/   # CI pipeline (build + test)
 └── src/                 # ROS 2 packages (hello_world_node)
-```
-
-Planned, created only when they have real content:
-
-```text
-├── .github/workflows/   # CI/CD pipeline definitions
-├── simulation/          # Gazebo worlds and test scenarios
-├── docker/              # ARM64 Dockerfiles
-├── deploy/              # Deployment and rollback scripts
-├── monitoring/          # Prometheus and Grafana configuration
-└── docs/                # Experiments and results
+├── Dockerfile           # Image that builds and runs the node
+└── .dockerignore        # Keeps build artifacts out of the image
 ```
 
 <br>
